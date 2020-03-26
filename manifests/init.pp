@@ -68,7 +68,7 @@ class phpfpm (
       File[$pool_dir] {
         purge   => true,
         recurse => true,
-        notify  => Service[$service_name],
+        notify  => Class['phpfpm::service'],
       }
     }
 
